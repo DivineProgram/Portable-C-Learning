@@ -3,11 +3,8 @@
 #include <unistd.h>
 #include <string.h>
 
-#include "csvTesting.h"
-
-
-void innerFunc(void);
-void flexFunc(void (*func)(void));
+#include "HeaderFiles/csvTesting.h"
+#include "HeaderFiles/functionWrapper.h"
 
 void nonblock(short state);
 
@@ -15,6 +12,8 @@ void nonblock(short state);
 
 
 int main(void) {
+
+  flexFunc(innerFunc);
   
   struct carStock* table[64] = {0};
   getCarStock(table);
@@ -22,12 +21,12 @@ int main(void) {
   closeTable(table);
 
   nonblock(1);
-  printf("!!%c!!", getchar());
+  printf("!!%c!!\n", getchar());
   nonblock(0);
 
   char a[5];
   scanf("%s", &a);
-  printf("!!%s!!", a);
+  printf("!!%s!!\n", a);
   
 }
 
@@ -36,17 +35,7 @@ int main(void) {
 
 
 
-// FUNCTION POINTERS TESTING
 
-void innerFunc(void) {
-  printf("\tInner function\n");
-}
-
-void flexFunc(void (*func)(void)) {
-  printf("Pre-function\n");
-  func();
-  printf("Post-function\n");
-}
 
 
 
