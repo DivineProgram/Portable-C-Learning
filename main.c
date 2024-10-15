@@ -3,6 +3,7 @@
 #include "HeaderFiles/csvTesting.h"
 #include "HeaderFiles/functionWrapper.h"
 #include "HeaderFiles/posixNonblocking.h"
+#include "HeaderFiles/recursiveSorting.h"
 
 
 
@@ -31,5 +32,8 @@ int main(void) {
   // printf("!!%s!!\n", a);
 
   
-  
+
+  test_recursiveSorting();
+
 }
+
