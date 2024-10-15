@@ -19,6 +19,8 @@ void test_recursiveSorting(void) {
 
 
 
+// MERGE SORT
+
 void mergeSort(int* arrPtr, short len) {
   int lenL = len/2; // 5
   int lenR = len-lenL; // 6

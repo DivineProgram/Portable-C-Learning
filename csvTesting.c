@@ -6,6 +6,17 @@
 
 
 
+void test_csvTesting(void) {
+  struct carStock* table[64] = {0};
+  getCarStock(table);
+  printf("%s %s %hd %hd\n", table[1]->price, table[1]->brand, table[1]->year, table[1]->remaining);
+  closeTable(table);
+}
+
+
+
+// OPENING CSV FILES
+
 // get car stock data from csv
 void getCarStock(struct carStock* destination[64]) {
   FILE* filePtr = fopen("sample.csv", "r");

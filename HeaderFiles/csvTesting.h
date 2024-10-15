@@ -9,6 +9,7 @@ struct carStock {
   short remaining;
 };
 
+void test_csvTesting(void);
 
 void getCarStock(struct carStock* destination[64]);
 void closeTable(void* table[64]);

@@ -6,6 +6,17 @@
 
 
 
+void test_posixNonblocking(void) {
+  nonblock(1);
+  printf("!!%c!!\n", getchar());
+  nonblock(0);
+  char a[5];
+  scanf("%s", &a);
+  printf("!!%s!!\n", a);
+}
+
+
+
 // NON CANONICAL INPUT
 
 void nonblock(short state) {

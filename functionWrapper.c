@@ -5,6 +5,12 @@
 
 
 
+void test_functionWrapper(void) {
+  flexFunc(innerFunc);
+}
+
+
+
 // FUNCTION POINTERS TESTING
 
 void innerFunc(void) {
