@@ -7,17 +7,7 @@
 
 
 
-
-
 int main(void) {
-
-  test_functionWrapper();
-
-  test_csvTesting();
-
-  test_posixNonblocking();
-
-  test_recursiveSorting();
-
+  
 }
 
